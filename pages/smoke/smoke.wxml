@@ -1,0 +1,27 @@
+<!--smoke.wxml-->
+<view class='container'>
+  <view class='smoke-list-view'>
+    <block wx:for-items='{{list}}' wx:key='{{item.id}}'>
+      <view class='smoke-item'>
+        <image class='smoke-item-img' src='{{item.img}}'></image>
+        <view class='smoke-item-text'>
+          <view class='somke-item-name'>{{item.name}}</view>
+          <view class='smoke-item-price'>零售价: <text style='color:lightslategray;'>{{item.price}}</text></view> 
+        </view>
+        <view class='smoke-item-box'>
+          <view class='stepper'>
+            <text class='{{item.minusStatus}}' bindtap='bindMinus' data-index='{{index}}'>-</text>
+            <input type='number' value='{{item.num}}' bindinput='bindManual' data-index='{{index}}'></input>
+            <text class='normal' bindtap='bindPlus' data-index='{{index}}'>+</text>
+          </view>
+          <view class='smoke-item-sum'>库存: <text style='color:lightslategray;'>{{item.sum}}</text></view>
+        </view>
+        
+      </view>
+    </block>
+  </view>  
+  <view class='bottom-view'>
+    <button class='smoke-submit' type='primary' disabled='{{disabled}}' bindtap='submitOreder'>提交订单({{total}})</button>
+  </view>
+  
+</view>

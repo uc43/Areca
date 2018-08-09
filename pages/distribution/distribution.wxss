@@ -1,0 +1,11 @@
+.distribution-text {
+  color: lightslategray;
+  position: relative;
+  top: 30rpx;
+  left: 5%;
+  line-height: 20rpx;
+}
+ .shop-site {
+  margin: 50rpx 5%;
+  font-size: 38rpx;
+} 

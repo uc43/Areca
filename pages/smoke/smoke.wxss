@@ -1,0 +1,104 @@
+.smoke-list-view {
+  /* height: 80%; */
+  /* background-color: red; */
+  margin:  0 0 250rpx 0;
+}
+/*item  */
+.smoke-item {
+  background-color: white;
+  width: 90%;
+  height: 150rpx;
+  margin: 30rpx 5%;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 5rpx 5rpx #2E8B57;
+  display: flex;
+}
+/*icon  */
+.smoke-item-img {
+  margin: 15rpx 0 0 15rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+/*text层  */
+.smoke-item-text {
+  width: 250rpx;
+  margin: 30rpx 0 0 15rpx;
+}
+/*名称  */
+.somke-item-name {
+  color: #353535;
+  font-size: 35rpx;
+} 
+/*单价  */
+.smoke-item-price {
+  margin: 10rpx 0;
+  color: lightgray;
+  font-size: 28rpx;
+} 
+/*num层  */
+.smoke-item-box {
+  margin: 0 0 0 25%;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*库存  */
+.smoke-item-sum {
+  color: lightgray;
+  font-size: 24rpx;
+  padding: 5rpx;
+}
+/*加减主容器*/  
+.stepper {  
+    width: 70px;  
+    height: 26px;  
+    /*给主容器设一个边框*/  
+    border: 1px solid #ccc;  
+    border-radius: 3px;  
+    margin: 35rpx 0 0 0;  
+}  
+  
+/*加号和减号*/  
+.stepper text {  
+    width: 19px;  
+    line-height: 26px;  
+    text-align: center;  
+    float: left;  
+}  
+  
+/*数值*/  
+.stepper input {  
+    width: 30px;  
+    height: 26px;  
+    float: left;  
+    margin: 0 auto;  
+    text-align: center;  
+    font-size: 12px;  
+    /*给中间的input设置左右边框即可*/  
+    border-left: 1px solid #ccc;  
+    border-right: 1px solid #ccc;
+}  
+  
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+}  
+
+.smoke-submit {
+  width: 90%;
+  margin: 50rpx 5%;
+}
+.bottom-view {
+  width: 100%;
+  height: 200rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #F8F8F8;
+  z-index: 100;
+}

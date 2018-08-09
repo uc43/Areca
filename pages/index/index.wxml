@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class='headview'>
+    <image class='userinfo-head-img' src='{{headimg}}'>
+    </image>
+    <text class='userinfo-nikeName'>{{nickName}}</text>
+    <text class='userinfo-detail'>您在31便捷门店已完成{{orderNum}}次订单。生活愉快！{{}}{{}}</text>
+  </view>
+
+  <view class='contenview'>
+    <block wx:for-items='{{list}}' wx:key='{{item.id}}'>
+      <navigator url='../smoke/smoke?title={{item.name}}&id={{item.id}}&goods={{goods}}' hover-class='navigator-hover' class='conten-item-nav'>
+        <view class='conten-item' data-itemID='{{item.id}}'>
+          <image class='conten-item-img' src='{{item.img}}'></image>
+          <text class='conten-item-name'>{{item.name}}</text>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+  <view class='footview'>
+    <view class='foot-cartview' bindtap='cartAction' style='opacity: {{cartOpacity}};pointer-events: {{cartPointerEvents}};'>
+      <image class='foot-cart-img' src='/image/areca-cart.png'></image>
+    </view>
+  </view>
+</view>

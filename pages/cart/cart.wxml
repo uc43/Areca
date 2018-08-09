@@ -1,0 +1,35 @@
+<view class='container'>
+  <view class='user-view'>
+    <view class='user-view-cell'>
+      <text class='user-view-title'>名字:</text>
+      <input class='user-view-input' placeholder='输入收货人名字' value='{{name}}' bindinput='inputNameAction'></input>
+    </view>
+    <view class='user-view-cell'>
+      <text class='user-view-title'>电话号码:</text>
+      <input class='user-view-input' type='number' placeholder='输入电话号码' value='{{phone}}' bindinput='inputPhoneAction'></input>
+    </view>
+    <view class='user-view-cell'>
+      <text class='user-view-title'>收货地址:</text>
+       <input class='user-view-input' placeholder='输入收货地址' value='{{site}}' bindtap='inputSiteAction'></input> 
+    </view>
+  </view>
+  <text class='section'>选购订单 {{distance}}</text>
+  <view class='order-list-view'>
+    <block wx:for-items='{{cartOrder}}' wx:key='{{item.id}}'>
+      <view class='order-cell'>
+        <text class='user-view-title'>{{item.name}} x{{item.num}}</text>
+        <text class='order-price'>{{item.price}}</text>
+        <image class='order-trash' src='/image/areca-trash.png' bindtap='deleteGoodsAction' data-index='{{index}}'></image>
+      </view>
+    </block>    
+  </view>
+  <view class='oerder-help-view' bindtap='helpAction'>
+    <text class='help-text'>配送规则</text>
+    <image class='help-img' src='/image/areca-help.png'></image>
+    
+  </view>
+  <view class='order-clearing' bindtap='clearingAction'>
+    <text class='order-total'>结算({{total}})</text>
+  </view> 
+
+</view>
